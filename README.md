@@ -17,7 +17,7 @@
        go run hello.go
 
 ## Initialize Directory
-If your project is not in /home/go/src, then you can do any where and need to execute below commond in project.
+# If your project is not in /home/go/src, then you can do any where and need to execute below commond in project.
        go mod init goLangFirst
 
 
