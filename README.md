@@ -9,7 +9,7 @@
        export PATH=$PATH:/usr/local/go/bin
        export GOPATH=$HOME/go 
        export PATH=$PATH:$GOPATH/bin
- ## Save and exit, then run below commond
+## Save and exit, then run below commond
        source ~/.bashrc
 ## check version 
        go version
@@ -17,9 +17,10 @@
        go run hello.go
 
 ## Initialize Directory
-# If your project is not in /home/go/src, then you can do any where and need to execute below commond in project.
+## If your project is not in /home/go/src, then you can do any where and need to execute below commond in project.
        go mod init goLangFirst
 
 
 # tutorial link
-https://www.youtube.com/watch?v=oE_ZksdTtaU&list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbDulm&index=5
+https://www.youtube.com/watch?v=mC0HLzUWnQg&list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbDulm&index=6
+01:10
