@@ -22,5 +22,5 @@
 
 
 # tutorial link
-https://www.youtube.com/watch?v=mC0HLzUWnQg&list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbDulm&index=6
-01:10
+https://www.youtube.com/watch?v=K9pP2pl4D9E&list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbDulm&index=8
+00:10
