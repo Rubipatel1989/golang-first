@@ -1,12 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	var age int = 22
-	if age > 20 {
-		fmt.Println("Age is greater than 20")
-	} else {
-		fmt.Println("Age is less than 20")
-	}
+	currentTime := time.Now()
+	fmt.Println("Current Time", currentTime)
+	fmt.Printf("Type of time %T\n", currentTime)
+
+	formatedDate := currentTime.Format("02-01-2006, 03:04 PM")
+	fmt.Println("Changed format is", formatedDate)
+
+	dateStr := "2024-12-23"
+	layoutStr := "2006-01-02"
+	formatedStr, _ := time.Parse(layoutStr, dateStr)
+	fmt.Println("Formated Date is", formatedStr)
+
 }
