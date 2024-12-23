@@ -23,7 +23,7 @@ func main() {
 		fmt.Println("Invalid day")
 	}
 
-	month:= 3
+	month := 3
 	switch month {
 	case 1, 3, 5, 7, 8, 10, 12:
 		fmt.Println("31 days")
@@ -33,5 +33,19 @@ func main() {
 		fmt.Println("28 days")
 	default:
 		fmt.Println("Invalid month")
+	}
+
+	temperature := 30
+	switch {
+	case temperature < 0:
+		fmt.Println("It's freezing")
+	case temperature >= 0 && temperature <= 10:
+		fmt.Println("It's cold")
+	case temperature > 10 && temperature <= 20:
+		fmt.Println("It's cool")
+	case temperature > 20 && temperature <= 30:
+		fmt.Println("It's warm")
+	default:
+		fmt.Println("It's hot")
 	}
 }
