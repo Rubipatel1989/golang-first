@@ -27,3 +27,15 @@ https://www.youtube.com/watch?v=_utEjVtOwFE&list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbD
 
 ## Start server
  go run ./cmd/students-api/main.go -config config/local.yaml
+
+https://www.youtube.com/watch?v=OGhQhFKvMiM&t=6218s
+ 1:43:01
+
+
+ ## Postman
+ url - localhost:8080/api/students
+ request - {
+    "name":"Pawan",
+    "email":"pawankum0010@gmail.com",
+    "age":37
+}

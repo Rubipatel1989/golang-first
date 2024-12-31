@@ -1,7 +1,6 @@
 package main
 
 import (
-	"time"
 	"context"
 	"fmt"
 	"log"
@@ -10,8 +9,10 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
 
 	"goLangFirst/internal/config"
+	"goLangFirst/internal/http/handlers/student"
 )
 
 func main() {
@@ -19,9 +20,8 @@ func main() {
 	cfg := config.MustLoad()
 
 	router := http.NewServeMux()
-	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hello Pawan Kumar"))
-	})
+	router.HandleFunc("/api/students", student.New())
+	router.HandleFunc("POST /api/students", student.New())
 
 	// Setup server
 	server := &http.Server{
@@ -32,7 +32,7 @@ func main() {
 	fmt.Printf("Server starting at %s\n", cfg.HTTPServer.Addr)
 	done := make(chan os.Signal, 1)
 
-	signal.Notify(done, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)  
+	signal.Notify(done, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 
 	go func() {
 		err := server.ListenAndServe()
@@ -44,10 +44,10 @@ func main() {
 	slog.Info("Shutting down server")
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
-	err  := server.Shutdown(ctx)
+	err := server.Shutdown(ctx)
 	if err != nil {
 		slog.Error("Failed to shutdown server", slog.String("error", err.Error()))
 	}
 	slog.Info("Server shut down seccessfully")
-	
+
 }
