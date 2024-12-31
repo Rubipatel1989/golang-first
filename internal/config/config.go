@@ -9,14 +9,15 @@ import (
 )
 
 type HTTPServer struct {
-	Addr string
-}
-type Config struct {
-	Env         string `yaml:"env" env:"ENV" env-required:"true"`
-	StoragePath string `yaml:"storage_path" env:"STORAGE_PATH" env-required:"true"`
-	HTTPServer  `yaml:"http_server"`
+	Addr string `yaml:"address" env-required:"true"` // Map the "address" field in YAML
 }
 
+type Config struct {
+	Env         string     `yaml:"env" env:"ENV" env-required:"true"`
+	StoragePath string     `yaml:"storage_path" env-required:"true"`
+	HTTPServer  HTTPServer `yaml:"http_server"` // Map the "http_server" section in YAML
+}
+  
 func MustLoad() *Config {
 	var configPath string
 	configPath = os.Getenv("CONFIG_PATH")
@@ -39,8 +40,8 @@ func MustLoad() *Config {
 	var cfg Config
 	err := cleanenv.ReadConfig(configPath, &cfg)
 	if err != nil {
-		log.Fatalf("Can not read config: %s", err.Error())
-
+		log.Fatalf("Cannot read config: %s", err.Error())
 	}
+
 	return &cfg
 }
