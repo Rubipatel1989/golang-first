@@ -25,5 +25,5 @@
 https://www.youtube.com/watch?v=_utEjVtOwFE&list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbDulm&index=13
 00:10
 
-
-git 
+## Start server
+ go run ./cmd/students-api/main.go -config config/local.yaml
