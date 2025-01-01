@@ -39,3 +39,7 @@ https://www.youtube.com/watch?v=OGhQhFKvMiM&t=6218s
     "email":"pawankum0010@gmail.com",
     "age":37
 }
+
+## Sqlite GUI
+Need to install a sqlite GUI. [I have install TablePlus]
+After install create db [student], and select a storage path.
