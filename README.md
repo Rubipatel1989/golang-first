@@ -49,3 +49,6 @@ After install create db [student], and select a storage path.
 
 ## GET APi
 ![alt text](image.png)
+
+## Add a folder in root
+storage/storage.db
