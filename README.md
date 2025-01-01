@@ -33,7 +33,8 @@ https://www.youtube.com/watch?v=OGhQhFKvMiM&t=6218s
 
 
  ## Postman
- url - localhost:8080/api/students
+ url - localhost:8080/api/students [POST]
+ url - localhost:8080/api/students/1 [GET]
  request - {
     "name":"Pawan",
     "email":"pawankum0010@gmail.com",
