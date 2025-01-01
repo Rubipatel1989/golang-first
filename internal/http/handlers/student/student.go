@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"goLangFirst/internal/storage"
 	"goLangFirst/internal/types"
 	"goLangFirst/internal/utils/response"
 	"io"
@@ -17,7 +18,7 @@ import (
 type Handler struct {
 }
 
-func New() http.HandlerFunc {
+func New(storage storage.Storage) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 
 		slog.Info("Creating a student")
@@ -41,7 +42,14 @@ func New() http.HandlerFunc {
 			return
 		}
 
-		response.WriteJson(w, http.StatusCreated, map[string]string{"message": "student created successfully"})
+		lastId, err := storage.CreateStudent(student.Name, student.Email, student.Age)
+		slog.Info("Student created", slog.Int64("id", lastId))
+		if err != nil {
+			response.WriteJson(w, http.StatusInternalServerError, response.GeneralError(err))
+			return
+		}
+
+		response.WriteJson(w, http.StatusCreated, map[string]int64{"id": lastId})
 
 	}
 }

@@ -29,7 +29,7 @@ https://www.youtube.com/watch?v=_utEjVtOwFE&list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbD
  go run ./cmd/students-api/main.go -config config/local.yaml
 
 https://www.youtube.com/watch?v=OGhQhFKvMiM&t=6218s
- 1:43:01
+ 2:03:01
 
 
  ## Postman
@@ -38,7 +38,7 @@ https://www.youtube.com/watch?v=OGhQhFKvMiM&t=6218s
     "name":"Pawan",
     "email":"pawankum0010@gmail.com",
     "age":37
-}
+}  
 
 ## Sqlite GUI
 Need to install a sqlite GUI. [I have install TablePlus]
