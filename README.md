@@ -33,8 +33,9 @@ https://www.youtube.com/watch?v=OGhQhFKvMiM&t=6218s
 
 
  ## Postman
- url - localhost:8080/api/students [POST]
- url - localhost:8080/api/students/1 [GET]
+ url - localhost:8080/api/students [POST] studentAdd
+ url - localhost:8080/api/students/1 [GET] studentFetch
+ url - localhost:8080/api/students [GET] studentList
  request - {
     "name":"Pawan",
     "email":"pawankum0010@gmail.com",
@@ -44,3 +45,7 @@ https://www.youtube.com/watch?v=OGhQhFKvMiM&t=6218s
 ## Sqlite GUI
 Need to install a sqlite GUI. [I have install TablePlus]
 After install create db [student], and select a storage path.
+
+
+## GET APi
+![alt text](image.png)
