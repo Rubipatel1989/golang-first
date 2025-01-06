@@ -38,7 +38,7 @@ func main() {
 		Addr:    cfg.HTTPServer.Addr, // Use the correct field
 		Handler: router,
 	}
-
+	// Logging server
 	fmt.Printf("Server starting at %s\n", cfg.HTTPServer.Addr)
 	done := make(chan os.Signal, 1)
 
