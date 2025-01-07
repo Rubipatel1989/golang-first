@@ -33,7 +33,7 @@ func main() {
 	router.HandleFunc("PUT /api/students/{id}", student.UpdateById(storage))
 	router.HandleFunc("DELETE /api/students/{id}", student.DeleteById(storage))
 
-	// Setup server
+	// Setup server details
 	server := &http.Server{
 		Addr:    cfg.HTTPServer.Addr, // Use the correct field
 		Handler: router,
