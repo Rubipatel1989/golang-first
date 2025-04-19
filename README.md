@@ -52,3 +52,7 @@ After install create db [student], and select a storage path.
 
 ## Add a folder in root
 storage/storage.db
+
+## For student API Folder
+1. cmd/student-api
+2. internal
