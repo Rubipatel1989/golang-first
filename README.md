@@ -25,34 +25,5 @@
 https://www.youtube.com/watch?v=_utEjVtOwFE&list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbDulm&index=13
 00:10
 
-## Start server
- go run ./cmd/students-api/main.go -config config/local.yaml
-
 https://www.youtube.com/watch?v=OGhQhFKvMiM&t=6218s
  2:03:01
-
-
- ## Postman
- url - localhost:8080/api/students [POST] studentAdd
- url - localhost:8080/api/students/1 [GET] studentFetch
- url - localhost:8080/api/students [GET] studentList
- request - {
-    "name":"Pawan",
-    "email":"pawankum0010@gmail.com",
-    "age":37
-}  
-
-## Sqlite GUI
-Need to install a sqlite GUI. [I have install TablePlus]
-After install create db [student], and select a storage path.
-
-
-## GET APi
-![alt text](image.png)
-
-## Add a folder in root
-storage/storage.db
-
-## For student API Folder
-1. cmd/student-api
-2. internal
