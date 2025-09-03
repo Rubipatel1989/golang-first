@@ -11,5 +11,4 @@ func main() {
 	fmt.Println(age)
 	fmt.Println(isAdult)
 	fmt.Println(dob)
-	fmt.Println("Hello World")
 }

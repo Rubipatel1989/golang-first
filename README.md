@@ -25,5 +25,5 @@
 https://www.youtube.com/watch?v=_utEjVtOwFE&list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbDulm&index=13
 00:10
 
-https://www.youtube.com/watch?v=OGhQhFKvMiM&t=6218s
- 2:03:01
+https://www.youtube.com/watch?v=yZgwW6Yuc_E&t=1635s
+ 0:34:15
