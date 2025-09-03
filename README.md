@@ -26,4 +26,4 @@ https://www.youtube.com/watch?v=_utEjVtOwFE&list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbD
 00:10
 
 https://www.youtube.com/watch?v=yZgwW6Yuc_E&t=1635s
- 0:34:15
+ 0:54:15

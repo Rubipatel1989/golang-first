@@ -1,14 +1,15 @@
 package main
 
 func main() {
-	const pi = 3.14
-	const (
-		statusOK      = 200
-		notFound      = 404
-		internalError = 500
-	)
-	println(pi)
-	println(statusOK)
-	println(notFound)
-	println(internalError)
+	// for i := 0; i < 5; i++ {
+	// 	println(i)
+	// }
+	// i := 0
+	// for i < 5 {
+	// 	println(i)
+	// 	i++
+	// }
+	for i := range 10 {
+		println(i)
+	}
 }
