@@ -48,4 +48,12 @@ func main() {
 	default:
 		fmt.Println("It's hot")
 	}
+
+	year := 2000
+	switch {
+	case year > 1000:
+		fmt.Println("This is the 2nd millennium")
+	
+	}
+
 }
