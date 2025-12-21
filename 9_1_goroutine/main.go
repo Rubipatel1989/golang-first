@@ -5,9 +5,11 @@ import (
 	"time"
 )
 
-func printNumber() {
+func printNumber(n int) {
 	for i := 0; i <= 10; i++ {
-		fmt.Println(i)
+		result := n * i
+		//fmt.Println(result)
+		fmt.Printf("%d x %d = %d\n", n, i, result)
 	}
 
 }
@@ -21,6 +23,6 @@ func main() {
 	// for i := 1; i <= 10; i++ {
 	// 	fmt.Println(i)
 	// }
-	go printNumber()
+	go printNumber(2)
 	time.Sleep(1 * time.Second)
 }
