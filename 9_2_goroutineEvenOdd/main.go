@@ -16,6 +16,7 @@ func findEvens(nums []int, wg *sync.WaitGroup) {
 		}
 	}
 }
+
 func findOdds(nums []int, wg *sync.WaitGroup) {
 	defer wg.Done()
 	for _, num := range nums {
