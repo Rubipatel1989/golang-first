@@ -26,8 +26,6 @@ func findOdds(nums []int, wg *sync.WaitGroup) {
 }
 func main() {
 	nums := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	evens = nil
-	odds = nil
 	var wg sync.WaitGroup
 	wg.Add(2)
 	go findEvens(nums, &wg)
