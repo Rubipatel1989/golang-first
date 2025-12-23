@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// A pointer in Go (Golang) is a variable that stores the memory address of another variable.
 func modifyValueByReference(num *int) {
 	*num = *num + 30
 }
