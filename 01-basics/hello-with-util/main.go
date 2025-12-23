@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"goLangFirst/myutil"
+	"goLangFirst/utils/myutil"
 )
 
 func main() {
