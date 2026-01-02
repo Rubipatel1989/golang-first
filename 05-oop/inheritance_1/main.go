@@ -1,21 +1,26 @@
 package main
 
-import "fmt"
+import "strconv"
 
-type People struct {
-	Name string
-	Age  int
+type Education struct {
+	Degree  string
+	College string
+	Streem  string
+	Year    int
 }
 
-func (p People) Intro() {
-	fmt.Println("Hello, my name is", p.Name, "and I am", p.Age, "years old.")
+func (e Education) GetEducationDetails() string {
+	return e.Degree + " in " + e.Streem + " from " + e.College + ", Year: " + strconv.Itoa(e.Year)
 }
 
 func main() {
-	person := People{
-		Name: "Alice",
-		Age:  28,
+	edu := Education{
+		Degree:  "Bachelor of Science",
+		College: "XYZ University",
+		Streem:  "Computer Science",
+		Year:    2022,
 	}
 
-	person.Intro()
+	details := edu.GetEducationDetails()
+	println(details)
 }
