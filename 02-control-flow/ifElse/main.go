@@ -1,23 +1,31 @@
 package main
 
-import "fmt"
-
 func main() {
+	a := 100
+	b := 200
 
-	x := 101
-	if x == 100 {
-		fmt.Println("x is 100")
-	} else if x > 100 {
-		fmt.Println("x is greater than 100")
+	if a == b {
+		println("A & B are equals")
+	} else if a < b {
+		println("A is less than B")
+	} else if a > b {
+		println("A is greater than B")
 	} else {
+		println("A & B are not equals")
+	}
 
-		fmt.Println("x is smaller than 100")
-	}
-	y := 200
-	z := 500
-	if x == 100 && (y == 200 || z < 43) {
-		fmt.Println("x is 100 and y is 200")
+
+	a = 300
+	b = 200
+
+	if a == b {
+		println("A & B are equals")
+	} else if a < b {
+		println("A is less than B")
+	} else if a > b {
+		println("A is greater than B")
 	} else {
-		fmt.Println("x is not 100 and y is not 200")
+		println("A & B are not equals")
 	}
+
 }
