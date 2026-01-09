@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-func ReservseString(s string) string {
-	runes := []rune(s)
+func ReverseString(str string) string {
+	runes := []rune(str)
 	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
 		runes[i], runes[j] = runes[j], runes[i]
 	}
@@ -12,7 +12,7 @@ func ReservseString(s string) string {
 
 func main() {
 	input := "ATAL"
-	reverse := ReservseString(input)
+	reverse := ReverseString(input)
 	fmt.Println("Main string", input)
-	fmt.Println("Reversed string", reverse)
+	fmt.Println("Reverse string", reverse)
 }
