@@ -13,8 +13,9 @@ func printNumbers(n int) {
 }
 
 func main() {
+	println("=========== Start table 1 ============")
 	go printNumbers(3)
 	time.Sleep(2 * time.Second)
-	println("===========Start another table ============")
+	println("=========== Start table 2 ============")
 	printNumbers(2)
 }
