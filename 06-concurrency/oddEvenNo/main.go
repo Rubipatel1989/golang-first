@@ -5,32 +5,32 @@ import (
 	"sync"
 )
 
+func evenNo(nums []int, wg *sync.WaitGroup, result *[]int) {
+	defer wg.Done()
+	for _, num := range nums {
+		if num%2 == 0 {
+			*result = append(*result, num)
+		}
+	}
+}
+func oddNo(nums []int, wg *sync.WaitGroup, result *[]int) {
+	defer wg.Done()
+	for _, num := range nums {
+		if num%2 != 0 {
+			*result = append(*result, num)
+		}
+	}
+}
 func main() {
-	nums := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
-	var evens []int
-	var odds []int
-
+	nums := []int{000, 00, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	var wg sync.WaitGroup
+	var evenResult []int
+	var oddResult []int
+
 	wg.Add(2)
-	// Even number goroutine
-	go func() {
-		defer wg.Done()
-		for _, num := range nums {
-			if num%2 == 0 {
-				evens = append(evens, num)
-			}
-		}
-	}()
-	// Odd number goroutine
-	go func() {
-		defer wg.Done()
-		for _, num := range nums {
-			if num%2 != 0 {
-				odds = append(odds, num)
-			}
-		}
-	}()
+	go evenNo(nums, &wg, &evenResult)
+	go oddNo(nums, &wg, &oddResult)
 	wg.Wait()
-	fmt.Println("Even Numbers:", evens)
-	fmt.Println("Odd Numbers:", odds)
+	fmt.Println("Even Numbers:", evenResult)
+	fmt.Println("Odd Numbers:", oddResult)
 }
